@@ -15,32 +15,10 @@ if (arr1.length !== arr2.length) return false;
   // loop to loop through the elements 
 for (let i = 0; i < arr1.length; i++) {
   if (arr1[i] !== arr2[i]) {
-    result.push(false); 
-    // if arr[i] element doesn't equal to arr2[i] --> return false
-  }
-  result.push(true);
-  // return true
-  // otherwise return true 
+   return false
+  } 
 }
-// const hasFalseValue = result.includes(false); 
-// checks to see if there is a false value in the result array 
-// will return true if tehere is a false result 
-// stores it in the variable 
-
-const filteredResult = result.filter(boolean => boolean === false); 
-// checks to see if there is fales values in result 
-return filteredResult.length === 0; 
-
-
-// return !hasFalseValue;
-// the negative of hasFalseValue is the proper eqArray 
-// eqArray is asking if any items are not equivalent 
-// hasFalseValue is aksing if there is a false result 
-// these are opposite objectives 
-// inorder to make them equal you have to reverse hasFalseValue
-
-// if there is a false in array
-// result.includes makes it true
+return true; 
 }
 eqArrays([1, 2, 3], [1, 2, 3]) // => true
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
@@ -56,3 +34,40 @@ assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
 
 console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
+
+// const eqArrays = (arr1, arr2) => {
+//   if (arr1.length !== arr2.length) return false; 
+//     let result = []; 
+//     // loop to loop through the elements 
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr1[i] !== arr2[i]) {
+//       result.push(false); 
+//       // if arr[i] element doesn't equal to arr2[i] --> return false
+//     }
+//     result.push(true);
+//     // return true
+//     // otherwise return true 
+//   }
+//   // const hasFalseValue = result.includes(false); 
+//   // checks to see if there is a false value in the result array 
+//   // will return true if tehere is a false result 
+//   // stores it in the variable 
+  
+//   const filteredResult = result.filter(boolean => boolean === false); 
+//   // checks to see if there is fales values in result 
+//   return filteredResult.length === 0; 
+//   // if the filteredResult.length = 0; this means that there are no false
+//   // aka that means that 0 === 0; or false === false
+//   // which means that this is true 
+  
+  
+//   // return !hasFalseValue;
+//   // the negative of hasFalseValue is the proper eqArray 
+//   // eqArray is asking if any items are not equivalent 
+//   // hasFalseValue is aksing if there is a false result 
+//   // these are opposite objectives 
+//   // inorder to make them equal you have to reverse hasFalseValue
+  
+//   // if there is a false in array
+//   // result.includes makes it true
+//   }
