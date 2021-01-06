@@ -42,6 +42,10 @@ const middle = function(array) {
     if (array.length % 2 === 0) {
       // take the (array.length - 1) /2 -->
       let a = (Math.floor((array.length - 1) / 2) - 1);
+      // the math is array.length - 1 --> gives index of last element 
+      // divide the index by 2 which gives us the half way poitn 
+      // subtract one to get the number before it 
+      // round it up to access index of the first middle number 
       let b = (array.length / 2);
       newArr = [array[a], array[b]];
       // newArr.push(array[i])
