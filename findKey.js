@@ -1,10 +1,10 @@
-// takes in an object and a callback 
-// scan the object 
-// return teh first kehy for whcih the callback returns a truthy value 
-// if no key is found then return undefined 
+// takes in an object and a callback
+// scan the object
+// return teh first kehy for whcih the callback returns a truthy value
+// if no key is found then return undefined
 
-// this function will return a slice of the array with elements taken from the beginning 
-// callback will only be given one value, the item in the array  
+// this function will return a slice of the array with elements taken from the beginning
+// callback will only be given one value, the item in the array
 
 const assertEqual = function(actual, expected) {
   // return actual === expected;
@@ -24,22 +24,22 @@ const findKey = function(object, callBack) {
     // console.log('star: ', star);
     // console.log('value: ', object[star]['stars']);
     // for (value in stars)
-    if(callBack(object[star])){
+    if (callBack(object[star])) {
       // console.log('Inside if statement:');
       // console.log('star: ', star);
-      // console.log(object[star]['stars']); 
-      // push the corresponsing star to the results array 
+      // console.log(object[star]['stars']);
+      // push the corresponsing star to the results array
       // results.push(star);
       results = star;
       break;
-   } 
-  // return object.key that applies 
+    }
+    // return object.key that applies
   
-}
-// console.log(results);
-// return results;
-return results;
-}
+  }
+  // console.log(results);
+  // return results;
+  return results;
+};
 const results1 = findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
@@ -47,7 +47,7 @@ const results1 = findKey({
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
-}, x => x.stars === 2) // => "noma"
+}, x => x.stars === 2); // => "noma"
 
 // const results2 = findKey({
 //   "Blue Hill": { stars: 8 },
