@@ -7,8 +7,6 @@
 // callback will only be given one value, the item in the array
 
 const assertEqual = function(actual, expected) {
-  // return actual === expected;
-  // console.assert(actual === expected);
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`
     );
@@ -18,27 +16,15 @@ const assertEqual = function(actual, expected) {
 };
 
 const findKey = function(object, callBack) {
-  let results;
-  // loop through the object
-  for (const star in object) {
-    // console.log('star: ', star);
-    // console.log('value: ', object[star]['stars']);
-    // for (value in stars)
+  let result;
+  for (let star in object) {
     if (callBack(object[star])) {
-      // console.log('Inside if statement:');
-      // console.log('star: ', star);
-      // console.log(object[star]['stars']);
-      // push the corresponsing star to the results array
       // results.push(star);
-      results = star;
+      result = star;
       break;
     }
-    // return object.key that applies
-  
   }
-  // console.log(results);
-  // return results;
-  return results;
+  return result;
 };
 const results1 = findKey({
   "Blue Hill": { stars: 1 },
@@ -60,3 +46,5 @@ const results1 = findKey({
 
 
 assertEqual(results1, 'noma');
+
+
