@@ -18,34 +18,11 @@ const assertEqual = function(actual, expected) {
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object tellig us what to count
 
-// const countOnly = function(allItems, itemsToCount) {
-//   let result = {};
-//   // loop through the itemsToCount
-//   for (let key of allItems) {
-//     if (itemsToCount[key]) {
-//       // if itemsToCount[a] (which is the object) is equal true
-//       if (result[key]){
-//         // checking to if result[key] already exists
-//         result[key] += 1;
-//         // if it does exist, we're adding +1
-//       } else {
-//         result[key] = 1;
-//         // if it doesn't exist we're making it equal to one
-//       }
-//     }
-//     // console.log('keys:', keys);
-//     // console.log('values:', itemsToCount[keys]);
-//   //bc its an object use for in
-  
-// }
-// return result;
-
-// }
 
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
   for (const item of allItems) {
-    console.log(item);
+    // console.log(item);
     if (itemsToCount[item]) {
       if (results[item]) {
       // if this element of allItems exists

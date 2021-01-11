@@ -76,7 +76,10 @@ const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Re
 
 const result1 = takeUntil(data1, x => x < 0); 
 // x is the parameter and item is the argumetn that is being put through
-console.log(result1);
+// console.log(result1);
+assertArraysEqual(result1, [ 1, 2, 5, 7, 2]);
 
 const result2 = takeUntil(data2, x => x === ','); 
-console.log(result2);
+// console.log(result2);
+assertArraysEqual(result2, [ 'I\'ve', 'been', 'to', 'Hollywood']);
+

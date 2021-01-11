@@ -9,7 +9,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-
+module.exports = assertEqual;
+// exports the file funciton 
 // console.assert(<condition>, 'if this is true return falsy value then error message in')
