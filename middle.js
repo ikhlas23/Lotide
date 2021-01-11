@@ -1,3 +1,5 @@
+
+
 const eqArrays = (arr1, arr2) => {
   if (arr1.length !== arr2.length) return false;
   // loop to loop through the elements
@@ -59,7 +61,7 @@ const middle = function(array) {
   }
   console.log(newArr);
 };
-
-middle([1, 2]); // => [];
-middle([1, 2, 3, 4, 5]); // => [3];
 middle([1, 2, 3, 4, 5, 6]); // => [3, 4]
+
+module.exports = middle;
+
