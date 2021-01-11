@@ -1,13 +1,4 @@
-const assertEqual = function(actual, expected) {
-  // return actual === expected;
-  // console.assert(actual === expected);
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`
-    );
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 
 // return everythign except the first element
@@ -15,8 +6,7 @@ const tail = function(arg1) {
   return arg1.slice(1);
 };
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result, ["Lighthouse", "Labs"]);
+module.exports = tail;
 
 // Test Case: Check the original array
 const words = ["Yo Yo", "Lighthouse", "Labs"];
