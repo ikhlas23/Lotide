@@ -1,14 +1,3 @@
-const assertEqual = function(actual, expected) {
-  // return actual === expected;
-  // console.assert(actual === expected);
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`
-    );
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 // given an array and an object
 // it will return an object that contains counts of everything
 // the array lists a letter and the object has the letter as pair with either false or true
@@ -38,32 +27,5 @@ const countOnly = function(allItems, itemsToCount) {
   return results;
 };
 
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
+module.exports = countOnly;
 
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-// console.log(result1);
-
-assertEqual(result1["Jason"], 1);
-// jason shows up once on the list
-assertEqual(result1["Karima"], undefined);
-// on the first test it was undefined and this is because the property didn't exist and your comparing undefined to undefined
-assertEqual(result1["Fang"], 2);
-// fang shows up twice on the list
-assertEqual(result1["Agouhanna"], undefined);
-// Agouhanna is never on the list
-// on the first test it was undefined and this is because the property didn't exist and your comparing undefined to undefined
-
-
-
-/* assertEqual can only compare primitve values
-that's why we can't compare the array and teh object directluy*/
